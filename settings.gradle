@@ -1,0 +1,2 @@
+include ':app', ':drxpaging'
+rootProject.name='DrxPagingSample'
