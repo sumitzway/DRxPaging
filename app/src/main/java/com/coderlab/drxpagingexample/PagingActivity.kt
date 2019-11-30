@@ -1,4 +1,4 @@
-package com.coderlab.cricketkotlindemo.paging
+package com.coderlab.drxpagingexample
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -6,13 +6,13 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.coderlab.cricketkotlindemo.R
-import com.coderlab.cricketkotlindemo.custom.DRxPagedList
+
 import com.coderlab.cricketkotlindemo.paging.adapter.ItemAdapterDRx
 import com.coderlab.cricketkotlindemo.paging.model.Item
 import com.coderlab.cricketkotlindemo.paging.viewmodel.ItemViewModel
+import com.sumitzway.drxpaging.DRxLinearLayoutManager
+import com.sumitzway.drxpaging.DRxPagedList
 
 
 class PagingActivity : AppCompatActivity() {
@@ -23,7 +23,7 @@ class PagingActivity : AppCompatActivity() {
 
         //setting up recyclerview
         val recyclerView: RecyclerView = findViewById(R.id.recyclerview)
-        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.layoutManager = DRxLinearLayoutManager(this)
         recyclerView.setHasFixedSize(true)
         //getting our ItemViewModel
         val adapter = ItemAdapterDRx(this)
